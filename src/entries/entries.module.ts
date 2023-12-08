@@ -9,10 +9,10 @@ import {PrismaService} from "../prisma.service";
     providers: [
         EntriesService,
         PrismaService,
-        // {
-        //     provide: 'APP_GUARD',
-        //     useClass: AuthGuard,
-        // }
+        {
+            provide: 'APP_GUARD',
+            useClass: AuthGuard,
+        }
     ],
 })
 export class EntriesModule {
